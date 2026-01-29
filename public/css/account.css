@@ -1,0 +1,10 @@
+.account-posibilities ul li{
+    list-style: none;
+    cursor: pointer;
+}
+.account-posibilities .active{
+    text-decoration: underline !important;
+}
+.grid-collumns-account{
+    grid-template-columns: 2fr 4fr 8fr 8fr 3fr 2fr;
+}

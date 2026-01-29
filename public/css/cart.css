@@ -1,0 +1,26 @@
+.grid-collumns-cart{
+    grid-template-columns: 5fr 2fr;
+}.grid-collumns-checkout{
+    grid-template-columns: 4fr 2fr;
+}
+
+.grid-collumns-cart-item{
+    grid-template-columns: 6fr 24fr 6fr 9fr 6fr 2fr;
+}
+.quantity-cart{
+    border: none !important;
+    grid-template-columns: 1fr auto;
+}
+.quantity-cart .num{
+    width: 70px !important;
+    text-align: right !important;
+}
+.btn-cart{
+    margin-right: 0 !important;
+}
+.loader-cart{
+    padding: 30px !important;
+}
+.loader-cart > .rotate{
+    position: static !important;
+}

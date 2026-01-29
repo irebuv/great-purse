@@ -1,0 +1,114 @@
+.main-bg > div{
+    position: relative;
+}
+
+.main-bg>div>div:last-child {
+    text-align: center;
+    width: 100%;
+    aspect-ratio: 3/1;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+
+.carousel {
+    position: relative;
+    aspect-ratio: 3/1;
+    z-index: 2;
+}
+
+.carousel img {
+    width: 100%;
+    min-height: inherit;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 3/1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*z-index: -1;*/
+}
+
+/*
+.carousel img:first-child {
+    z-index: -2;
+}*/
+.nav-block>div {
+    position: relative;
+}
+
+.nav-block>div>a {
+    color: var(--white);
+    aspect-ratio: 2/1;
+    transition: color, background-color 0.5s linear;
+}
+
+.nav-block>div>a:hover {
+    color: var(--red) !important;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-block>div>img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 2/1;
+}
+
+.nav-block>div>a {
+    height: inherit;
+    position: relative;
+    z-index: 2;
+}
+.new{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.new > img{
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1/1;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+.new > div{
+    position: absolute;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    z-index: 3;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    color: var(--brown);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.new > div:hover{
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.advantages > div{
+    width: 100%;
+    aspect-ratio: 3/1;
+}
+.price-block{
+    color: var(--red);
+}
+.price-common{
+    color: var(--brown);
+}
+.price-block span:first-child{
+    color: var(--gray);
+     text-decoration: line-through;
+}
+.grid-columns-product{
+    grid-template-columns: auto 1fr auto;
+}

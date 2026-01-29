@@ -1,0 +1,81 @@
+.flash-container {
+    position: absolute;
+    top: 60px;
+    z-index: 999;
+    right: 20px;
+}
+
+.form-mes {
+    width: 420px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0px 6px 15px 14px rgba(34, 60, 80, 0.16);
+    background: whitesmoke;
+}
+
+.error-flash {
+    color: var(--red) !important;
+}
+
+.success-flash {
+    color: var(--green) !important;
+}
+
+.message {
+    border-radius: 5px;
+}
+
+.message p {
+    margin-bottom: 0 !important;
+    font-size: 1.5em !important;
+}
+
+.message-error {
+    background: var(--lightred) !important;
+    color: var(--darkred) !important;
+}
+
+.message-success {
+    background: var(--lightgreen) !important;
+    color: var(--darkgreen) !important;
+}
+
+.message-warning {
+    background: var(--yellow) !important;
+    color: var(--darkyellow) !important;
+}
+
+.close-flash-msg {
+    background-image: url('/image/close.png') !important;
+    width: 30px;
+    height: 30px;
+}
+
+.close-flash-msg:hover {
+    background-image: url('/image/close-act.png') !important;
+}
+
+.close-flash {
+    display: block;
+    position: relative;
+    float: right;
+    margin: -30px -30px 0 0;
+}
+
+.close-flash img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.btn-with-image {
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.btn-without-style {
+    border: none;
+    background: none;
+    cursor: pointer;
+}

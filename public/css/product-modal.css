@@ -1,0 +1,93 @@
+.featured-goods {
+    background: var(--lightgray);
+    padding: 5px;
+    box-shadow: 0px 0px 8px -4px rgba(47, 44, 44, 0.4);
+    position: relative;
+    align-items: baseline;
+    border-radius: 3px;
+}
+.featured-goods a{
+    color: var(--black) !important;
+}
+
+.featured-goods:hover a{
+    color: var(--brown) !important;
+    text-decoration: none;
+}
+
+.featured-goods>a {
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.featured-goods>a img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3px;
+}
+.featured-goods:hover {
+    box-shadow: 0px 0px 25px 2px rgba(47, 44, 44, 0.6);
+}
+.mark{
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    right: 10px;
+    top: 10px;
+    opacity: 0.7;
+    z-index: 2;
+}
+.mark-hit{
+    background: var(--brown);
+    border-radius: 50%;
+}
+.mark-new{
+    background: var(--red);
+    border-radius: 50%;
+}
+
+.stars-range {
+    width: 150px;
+    height: 30px;
+}
+.stars-range div{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.stars-range-a{
+    height: 35px;width: 40px;
+}
+.stars-range-a div{
+    position: absolute;
+    width: inherit;
+    text-align: center;
+    top: 2px;
+    z-index: 2;
+}
+
+.stars-range div:first-child{
+    background-image: url(/image/stars-gray.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: inherit;
+    height: inherit;
+    z-index: 3;
+}
+
+.product-stars .stars-range div:first-child{
+    background-image: url(/image/stars.png) !important;
+}
+.stars-range div:last-child{
+    background: yellow;
+    height: inherit;
+    width: 0%;
+    z-index: 2;
+}

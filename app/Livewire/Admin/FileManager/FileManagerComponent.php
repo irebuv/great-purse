@@ -1,0 +1,42 @@
+<?php
+
+namespace App\Livewire\Admin\FileManager;
+
+use App\Models\Media;
+use Livewire\Attributes\Validate;
+use Livewire\Component;
+use Livewire\WithFileUploads;
+use Livewire\WithoutUrlPagination;
+use Livewire\WithPagination;
+
+class FileManagerComponent extends Component
+{
+    use WithFileUploads, WithPagination, WithoutUrlPagination;
+
+    #[Validate]
+    public $media;
+
+
+    protected function rules()
+    {
+        return [
+            'media' => 'required|image|mimes:jpg,jpeg,png|max:8192',
+        ];
+    }
+    public function saveMedia()
+    {
+        $validated = $this->validate();
+
+        $folders = date('Y') . '/' . date('m') . '/' . date('d');
+        $validated['media'] = "uploads/" . $validated['media']->store($folders);
+
+        Media::create($validated);
+        $this->js("toastr.success('Upload successfully!')");
+        $this->media = null;
+    }
+    public function render()
+    {
+        $medias = Media::orderBy('id', 'desc')->paginate();
+        return view('livewire.admin.file-manager.file-manager-component', compact('medias'));
+    }
+}

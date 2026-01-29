@@ -1,0 +1,53 @@
+
+/* --------------toastr-------------- */
+#toast-container > div.toast {
+    opacity: 1;
+    box-shadow: none;
+    background-image: none !important;
+}
+
+#toast-container .toast-success {
+    background-color: #e9ffd9;
+    border-left: 5px solid #6d8d55;
+}
+
+#toast-container .toast-success:before {
+    content: "\2728";
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #6d8d55;
+}
+
+.toast-success .toast-message {
+    color: #498048;
+}
+
+#toast-container .toast-error {
+    background-color: #ffecec;
+    border-left: 5px solid #f5aca6;
+}
+
+.toast-error .toast-message {
+    color: #a94442;
+}
+
+#toast-container .toast-error:before {
+    content: "\2753";
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #a94442;
+}
+
+#toast-container ul {
+    list-style: none;
+}

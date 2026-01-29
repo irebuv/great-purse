@@ -1,0 +1,251 @@
+:root {
+    --brown: rgb(166, 122, 65);
+    --black: #000;
+    --white: #fff;
+    --gray: rgb(201, 199, 199);
+    --lightgray: rgb(236, 236, 236);
+    --green: #0dcc46;
+    --lightgreen: rgba(18, 215, 132, 0.57);
+    --darkgreen: #275e2f;
+    --errorred: rgb(255, 209, 209);
+    --red: #e84a43;
+    --darkred: #792828;
+    --lightred: rgba(255, 0, 0, 0.49);
+    --lightbrown: rgba(213, 143, 54, 0.16);
+    --lightbrown2: #E8DDCF;
+    --yellow: rgb(214, 214, 105);
+    --darkyellow: rgb(98, 98, 51);
+}
+
+a {
+    color: var(--brown);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--brown);
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+label.required::before {
+    content: '* ';
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.error-block {
+    border: 2px solid var(--red);
+    border-radius: 7px;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes anim {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.image-create {
+    box-shadow: 0px 0px 13px -4px rgba(5, 5, 5, 0.45) inset;
+    -webkit-box-shadow: 0px 0px 13px -4px rgba(5, 5, 5, 0.45) inset;
+    -moz-box-shadow: 0px 0px 13px -4px rgba(5, 5, 5, 0.45) inset;
+    border-radius: 10px;
+}
+
+.image-create-input {
+    height: 33px;
+    font-size: 11px;
+}
+
+.media-copied {
+    position: fixed;
+    background: #e9ffd9;
+    color: #498048;
+    padding: 20px 30px;
+    right: 20px;
+    top: 20px;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    padding: 200px;
+}
+
+.loader>.rotate {
+    position: sticky;
+    margin: 0 auto;
+    top: 30%;
+    display: block;
+    width: 100px !important;
+    height: 100px !important;
+    border: 20px solid;
+    border-left-color: var(--lightgreen);
+    border-right-color: var(--lightgreen);
+    border-top-color: var(--green);
+    border-bottom-color: var(--green);
+    animation: anim 1s linear infinite;
+    -webkit-animation: anim 1s linear infinite;
+    border-radius: 50%;
+}
+
+.loader-small {
+    padding: 10px !important;
+    border-radius: 7px;
+}
+
+.loader-small>.rotate {
+    position: relative !important;
+    top: 30% !important;
+    width: 50px !important;
+    height: 50px !important;
+    border: 10px solid;
+    border-left-color: var(--lightgreen);
+    border-right-color: var(--lightgreen);
+    border-top-color: var(--green);
+    border-bottom-color: var(--green);
+}
+
+.img-square-def {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.filter-checks {
+    display: grid;
+    justify-content: center;
+}
+
+.filter-title div:last-child {
+    display: inline-block;
+}
+
+.filter-checks input {
+    display: none;
+}
+
+.filter-checks input+label,
+.filter-checks input+label::before,
+.filter-checks input+label::after {
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.filter-checks input+label {
+    display: inline-block;
+    position: relative;
+    width: 110px;
+    height: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.filter-checks input+label::before {
+    display: block;
+    content: attr(data-off-label);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.filter-checks input+label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.filter-checks input:checked+label::before {
+    content: attr(data-on-label);
+    left: 22px;
+    right: auto;
+    color: #fff;
+}
+
+.filter-checks input:checked+label::after {
+    left: 74px;
+    background-color: #f7f7f7;
+}
+
+.filter-checks .demo1+label {
+    background-color: #ccc;
+}
+
+.filter-checks .demo1+label::before {
+    color: #999;
+}
+
+.filter-checks .demo1:checked+label {
+    background-color: #3498db;
+}
+
+.filter-checks .demo1:checked+label::before {
+    color: #fff;
+}
+
+.input-filters {
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.11);
+    box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.11);
+}
+
+.input-filters:focus-visible {
+    outline: none;
+}
+
+.btn-without-style {
+    border: none !important;
+    cursor: pointer;
+}
+
+.btn-with-image {
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.btn-delete {
+    background-image: url('/image/delete-item.png') !important;
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar .nav-item .nav-link {
+    padding: .5rem 1rem;
+}
+
+.sidebar .nav-item .nav-link.active,
+.sidebar .nav-item .nav-link.active i {
+    color: var(--white);
+}

@@ -1,0 +1,314 @@
+.product {
+    grid-template-columns: 3fr 5fr;
+    gap: 20px;
+}
+
+.product-main-image {
+    width: 100% !important;
+    aspect-ratio: 1/1.0 !important;
+}
+
+.carousel-product img {
+    border: 1px solid var(--brown);
+    cursor: pointer;
+}
+
+.product-main-image .loading, 
+.main-image .loading {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    opacity: 0.5;
+}
+.main-image .loading {
+    z-index: -1;
+    opacity: 1;
+
+}
+
+.product-main-image img {
+    position: absolute;
+    z-index: 2;
+    cursor: zoom-in;
+}
+
+.active-product {
+    border: 3px solid var(--brown) !important;
+}
+
+.product-main-image div {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+.quantity {
+    border: 1px solid var(--brown);
+    height: 55px;
+}
+
+.num {
+    width: 40px;
+    outline: none;
+    background: none;
+    border: none;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.info-block>div {
+    border: 1px solid var(--brown);
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.info-block ul {
+    width: max-content;
+}
+
+.info-block ul li {
+    list-style: none;
+    margin-top: 5px;
+}
+
+.info-block h5 {
+    width: max-content;
+}
+
+.description-nav {
+    border-bottom: 1px solid var(--brown);
+}
+
+.description-nav li {
+    list-style: none;
+    display: inline;
+}
+
+.description-nav button {
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.description-nav .active {
+    border: 1px solid var(--brown);
+    border-bottom: none !important;
+    background: #E8DDCF;
+}
+
+.features {
+    grid-template-columns: 1fr 6fr;
+}
+
+.comment-block {
+    border: 1px solid var(--brown);
+    border-radius: 5px;
+}
+
+.comment-block>div:first-child {
+    background: #E3CFB4;
+    border-radius: 5px 5px 0 0;
+    grid-template-columns: auto auto 1fr auto;
+}
+
+.comment-block .stars-range div:first-child {
+    background-image: url(/image/stars-comment.png) !important;
+}
+
+.make-comment {
+    background: #E3CFB4;
+    border: 1px solid var(--brown);
+    border-radius: 5px;
+}
+
+.make-comment button {
+    padding: 5px 10px;
+    background: var(--brown);
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-comment {
+    position: fixed;
+    margin: auto;
+    width: 800px;
+    top: 12.5%;
+    left: 50%;
+    max-height: 75%;
+    margin-left: -400px;
+    min-height: 100px;
+    border-radius: 10px;
+    background: var(--lightbrown2);
+    padding: 20px;
+    z-index: 11;
+    overflow: auto;
+}
+
+.small-textarea {
+    min-height: 70px !important;
+}
+
+.add-comment>button {
+    float: right;
+    top: 0;
+    position: sticky;
+}
+
+.next-product,
+.prev-product {
+    border: none;
+    height: 100%;
+    width: 100px;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+    cursor: pointer !important;
+}
+
+.next-product{
+    left: calc(100% - 200px);
+}
+.next-product img,
+.prev-product img {
+    height: 60px;
+    margin-top: -30px;
+    right: 20px;
+    cursor: pointer !important;
+}
+
+.prev-product img {
+    rotate: 180deg;
+    left: 20px !important;
+}
+
+.next-product::before,
+.prev-product::before {
+    position: absolute;
+    content: "";
+    opacity: 0;
+    z-index: 1;
+    inset: 0;
+    width: 100px;
+    transition: opacity 0.5s linear;
+}
+
+.next-product::before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.22) 100%);
+}
+
+.prev-product::before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.next-product:hover::before {
+    opacity: 1;
+}
+
+.prev-product:hover::before {
+    opacity: 1;
+}
+
+/*------------------------------gallery--------------------------------*/
+.gallery{
+    position: fixed;
+    z-index: 20;
+    inset: 5% 15%;
+    padding: 30px;
+    background: var(--lightbrown);
+    display: none;
+    border-radius: 10px;
+}
+.gallery .close-flash{  
+    position: absolute !important;  
+    right: 40px !important;
+  top: 40px !important;
+  width: 50px !important;
+  height: 50px !important;
+  z-index: 22;
+}
+.main-image img{
+    overflow: hidden;
+}
+.main-image img{
+    border-radius: 10px; 
+     margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+.gallery > div{
+    display: grid;
+    grid-template-rows: 87% 13%;
+}
+.carousel-products{
+    white-space: nowrap;
+}
+.carousel-products img{
+    display: inline-block;
+    width:  60px;
+    aspect-ratio: 1/1;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.grid-collumns-gallery{
+    grid-template-columns: auto 50% auto;
+}
+
+.prev-small img, .next-small img{
+    height: 40px;
+    cursor: pointer;
+}
+.prev-small img{
+    rotate: 180deg;
+}
+
+.next-big,
+.prev-big {
+    border: none;
+    height: 200px;
+    width: 200px;
+    top: calc(-50% - 100px);
+    background: transparent;
+    position: relative;
+    z-index: 2;
+    cursor: pointer !important;
+    border-radius: 50%;
+}
+
+.next-big{
+    left: calc(100% - 400px);
+}
+.next-big img,
+.prev-big img {
+    height: 100px;
+    right: 20px;
+    cursor: pointer !important;
+}
+
+.prev-big img {
+    rotate: 180deg;
+}
+
+.next-big::before,
+.prev-big::before {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    opacity: 0;
+    z-index: 1;
+    inset: 0;
+    width: 200px;
+    transition: opacity 0.5s linear;
+}
+
+.next-big::before,.prev-big::before {
+background: radial-gradient(circle,rgba(0, 0, 0, 0.41) 0%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.next-big:hover::before, .prev-big:hover::before {
+    opacity: 1;
+}
